@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:clipToPadding="false" android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:orientation="vertical" android:padding="20dp">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textAppearance="@style/TextAppearance.GC.Display" />
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" android:text="@string/home_subtitle"
+                android:textAppearance="@style/TextAppearance.GC.Body" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cardHid"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card"
+            android:elevation="3dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:gravity="center_vertical" android:orientation="horizontal">
+                <FrameLayout
+                    android:layout_width="48dp" android:layout_height="48dp"
+                    android:background="@drawable/bg_icon">
+                    <ImageView
+                        android:layout_width="26dp" android:layout_height="26dp"
+                        android:layout_gravity="center"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_gamepad" />
+                </FrameLayout>
+                <LinearLayout
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp" android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/card_hid_title"
+                        android:textAppearance="@style/TextAppearance.GC.Title" />
+                    <TextView
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp" android:text="@string/card_hid_desc"
+                        android:textAppearance="@style/TextAppearance.GC.Caption" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <View
+                    android:id="@+id/dotHid"
+                    android:layout_width="10dp" android:layout_height="10dp"
+                    android:background="@drawable/bg_dot" />
+                <TextView
+                    android:id="@+id/tvHidStatus"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp" android:layout_weight="1"
+                    android:textAppearance="@style/TextAppearance.GC.Body" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btnHidToggle"
+                style="@style/GCButtonPrimary"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="@string/btn_start_mode" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cardTv"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card"
+            android:elevation="3dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:gravity="center_vertical" android:orientation="horizontal">
+                <FrameLayout
+                    android:layout_width="48dp" android:layout_height="48dp"
+                    android:background="@drawable/bg_icon">
+                    <ImageView
+                        android:layout_width="26dp" android:layout_height="26dp"
+                        android:layout_gravity="center"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_cast" />
+                </FrameLayout>
+                <LinearLayout
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp" android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/card_tv_title"
+                        android:textAppearance="@style/TextAppearance.GC.Title" />
+                    <TextView
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp" android:text="@string/card_tv_desc"
+                        android:textAppearance="@style/TextAppearance.GC.Caption" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <View
+                    android:id="@+id/dotTv"
+                    android:layout_width="10dp" android:layout_height="10dp"
+                    android:background="@drawable/bg_dot" />
+                <TextView
+                    android:id="@+id/tvTvStatus"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp" android:layout_weight="1"
+                    android:textAppearance="@style/TextAppearance.GC.Body" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvTvTarget"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginStart="20dp" android:layout_marginTop="4dp"
+                android:textAppearance="@style/TextAppearance.GC.Caption" />
+
+            <TextView
+                android:id="@+id/btnTvToggle"
+                style="@style/GCButtonPrimary"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="@string/btn_start_mode" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cardCon"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card"
+            android:elevation="3dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:gravity="center_vertical" android:orientation="horizontal">
+                <FrameLayout
+                    android:layout_width="48dp" android:layout_height="48dp"
+                    android:background="@drawable/bg_icon">
+                    <ImageView
+                        android:layout_width="26dp" android:layout_height="26dp"
+                        android:layout_gravity="center"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_gamepad" />
+                </FrameLayout>
+                <LinearLayout
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp" android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/card_con_title"
+                        android:textAppearance="@style/TextAppearance.GC.Title" />
+                    <TextView
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp" android:text="@string/card_con_desc"
+                        android:textAppearance="@style/TextAppearance.GC.Caption" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <View
+                    android:id="@+id/dotCon"
+                    android:layout_width="10dp" android:layout_height="10dp"
+                    android:background="@drawable/bg_dot" />
+                <TextView
+                    android:id="@+id/tvConStatus"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp" android:layout_weight="1"
+                    android:textAppearance="@style/TextAppearance.GC.Body" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvConGame"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginStart="20dp" android:layout_marginTop="4dp"
+                android:textAppearance="@style/TextAppearance.GC.Caption" />
+            <TextView
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" android:text="@string/con_explain"
+                android:textAppearance="@style/TextAppearance.GC.Caption" />
+
+            <TextView
+                android:id="@+id/btnConToggle"
+                style="@style/GCButtonPrimary"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="@string/btn_con_start" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/footer"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/btnControllers"
+                    style="@style/GCButtonSecondary"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp" android:layout_weight="1"
+                    android:text="@string/btn_controllers" />
+                <TextView
+                    android:id="@+id/btnSettings"
+                    style="@style/GCButtonSecondary"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp" android:layout_weight="1"
+                    android:text="@string/btn_settings" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="14dp" android:text="@string/home_note"
+                android:textAppearance="@style/TextAppearance.GC.Caption" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

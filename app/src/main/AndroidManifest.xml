@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Hardware -->
+    <uses-feature android:name="android.hardware.bluetooth" android:required="true" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="true" />
+    <uses-feature android:name="android.hardware.wifi.direct" android:required="false" />
+
+    <!-- Bluetooth en Android 9 a 11 (API 28-30) -->
+    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30" />
+    <!-- Bluetooth en Android 12+ ("Dispositivos cercanos"): se piden al iniciar el modo Mando HID -->
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation"
+        tools:targetApi="s" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+
+    <!-- Servicios en primer plano (uno por modo) -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- Mostrar la captura sobre la pantalla de la TV aunque la app esté en segundo plano -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!-- Android 11+: poder abrir el panel de Cast del sistema -->
+    <queries>
+        <intent>
+            <action android:name="android.settings.CAST_SETTINGS" />
+        </intent>
+        <!-- App de Shizuku (detectar si está instalada y abrirla) -->
+        <package android:name="moe.shizuku.privileged.api" />
+        <!-- Apps con icono de lanzador: selector de juegos sin QUERY_ALL_PACKAGES -->
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
+    </queries>
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GameCast">
+
+        <!-- Pantalla principal: elegir modo -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Mando táctil (siempre horizontal y oscuro) -->
+        <activity
+            android:name=".ControllerActivity"
+            android:exported="false"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboardHidden"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/Theme.GamepadHid" />
+
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".shizuku.ShizukuSetupActivity"
+            android:exported="false" />
+
+        <!-- Mapeo de controles: se ve la pantalla virtual del juego en directo -->
+        <activity
+            android:name=".overlay.ControlMapperActivity"
+            android:exported="false"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboardHidden"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/Theme.GamepadHid" />
+
+        <!-- Provider de Shizuku: recibe el binder cuando el servicio de Shizuku está activo -->
+        <provider
+            android:name="rikka.shizuku.ShizukuProvider"
+            android:authorities="${applicationId}.shizuku"
+            android:enabled="true"
+            android:exported="true"
+            android:multiprocess="false"
+            android:permission="android.permission.INTERACT_ACROSS_USERS_FULL" />
+
+        <!-- Sesión del Modo Consola: ventana en la TV + pantalla virtual + juego. specialUse porque no es
+             connectedDevice (falla en Android 14+ sin permisos de Bluetooth/USB/red) ni mediaProjection. -->
+        <service
+            android:name=".console.ConsoleService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Muestra en la TV un juego que corre en una pantalla virtual y lo mantiene activo" />
+        </service>
+
+        <!-- Mando táctil flotante en la pantalla principal del teléfono -->
+        <service
+            android:name=".overlay.FloatingPadService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Mando táctil flotante que envía toques a la pantalla virtual del juego" />
+        </service>
+
+        <service
+            android:name=".hid.HidService"
+            android:exported="false"
+            android:foregroundServiceType="connectedDevice" />
+
+        <service
+            android:name=".cast.ProjectionService"
+            android:exported="false"
+            android:foregroundServiceType="mediaProjection" />
+    </application>
+</manifest>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tarjeta Modo Consola -->
+    <string name="card_con_title">Modo Consola (Shizuku)</string>
+    <string name="card_con_desc">El juego en la TV y el mando en tu teléfono.</string>
+    <string name="con_explain">El juego corre en una pantalla virtual que se ve en la TV y el mando táctil queda en la pantalla del teléfono. Requiere Shizuku. Los botones propios del juego SÍ se verán en la TV: solo desaparece el mando de GameCast. Algunos juegos no respetan la pantalla secundaria y no son compatibles.</string>
+    <string name="con_starting">Iniciando Modo Consola…</string>
+    <string name="con_running">Juego en la TV. Usa el mando flotante del teléfono.</string>
+    <string name="con_shizuku_needed">Hace falta preparar Shizuku</string>
+    <string name="con_ready">Listo para iniciar</string>
+    <string name="con_game">Juego: %1$s</string>
+    <string name="con_game_none">sin elegir</string>
+    <string name="btn_con_prepare">Preparar Shizuku</string>
+    <string name="btn_con_start">Iniciar Modo Consola</string>
+    <string name="con_fallback_msg">%1$s\n\nPuedes usar «Juego en TV» (espejo simple, sin separar el mando del juego) o revisar el diagnóstico.</string>
+    <string name="con_fallback_ok">Usar Juego en TV</string>
+    <string name="con_fallback_diag">Diagnóstico</string>
+    <string name="dialog_overlay_console_msg">El Modo Consola dibuja la imagen en la TV y el mando sobre el teléfono. Activa «Mostrar sobre otras apps» para GameCast y vuelve a pulsar Iniciar.</string>
+    <string name="toast_console_started">Iniciando el juego en la TV. El mando aparece en el teléfono.</string>
+
+    <!-- Errores y avisos de la sesión -->
+    <string name="console_err_shizuku">Shizuku ya no está listo. Revísalo en «Preparar Shizuku».</string>
+    <string name="console_err_display">No se pudo crear la pantalla virtual: %1$s</string>
+    <string name="console_unverified">Juego lanzado, pero no se pudo comprobar en qué pantalla quedó.</string>
+    <string name="console_incompatible">Este juego no es compatible con el modo «mando separado»: apareció en la pantalla del teléfono en vez de en la virtual.</string>
+    <string name="console_err_not_installed">El juego ya no está instalado.</string>
+    <string name="console_err_launch">No se pudo lanzar el juego en la pantalla virtual.</string>
+    <string name="notif_console_channel">Modo Consola</string>
+    <string name="notif_console_title">Modo Consola activo</string>
+    <string name="notif_console_text">El juego se muestra en la TV</string>
+    <string name="notif_pad_channel">Mando flotante</string>
+    <string name="notif_pad_title">Mando flotante activo</string>
+    <string name="notif_pad_text">El mando controla el juego de la TV</string>
+
+    <!-- Selector de juego -->
+    <string name="picker_title">Elegir juego</string>
+    <string name="picker_search_hint">Buscar</string>
+    <string name="picker_game_tag">juego</string>
+
+    <!-- Mapeo de controles -->
+    <string name="mapper_console_running">Detén el Modo Consola antes de mapear controles.</string>
+    <string name="mapper_needs_shizuku">Hace falta Shizuku listo para mapear controles.</string>
+    <string name="mapper_connecting">Conectando con Shizuku…</string>
+    <string name="mapper_launching">Lanzando el juego en la pantalla virtual…</string>
+    <string name="mapper_ready">Listo. Pulsa «Jugar» para llegar a la pantalla de juego y «Colocar» para mover los puntos sobre los botones reales.</string>
+    <string name="mapper_unverified">Juego lanzado (no se pudo comprobar la pantalla). Si no lo ves aquí, puede que no sea compatible.</string>
+    <string name="mapper_mode_place">Modo: colocar</string>
+    <string name="mapper_mode_play">Modo: jugar</string>
+    <string name="mapper_btn_add">+ Control</string>
+    <string name="mapper_btn_delete">Quitar</string>
+    <string name="mapper_btn_template">Plantilla</string>
+    <string name="mapper_btn_game">Juego</string>
+    <string name="mapper_btn_save">Guardar</string>
+    <string name="mapper_btn_exit">Salir</string>
+    <string name="mapper_all_present">Ya están todos los controles.</string>
+    <string name="mapper_add_title">Añadir control</string>
+    <string name="mapper_select_first">Toca primero un control.</string>
+    <string name="mapper_only_sticks">«+» y «−» solo cambian el recorrido de los sticks.</string>
+    <string name="mapper_template_confirm">Se reemplazarán todos los puntos por la plantilla estándar. ¿Continuar?</string>
+    <string name="mapper_saved">Mapa guardado.</string>
+    <string name="mapper_discard_confirm">Hay cambios sin guardar.</string>
+    <string name="mapper_save_exit">Guardar y salir</string>
+    <string name="mapper_discard">Descartar</string>
+
+    <!-- Configuración de Shizuku -->
+    <string name="shizuku_title">Preparar Shizuku</string>
+    <string name="shizuku_state_not_installed">Shizuku no está instalado</string>
+    <string name="shizuku_state_not_running">Shizuku está instalado pero no está en marcha</string>
+    <string name="shizuku_state_no_permission">Shizuku está en marcha. Falta dar permiso a GameCast</string>
+    <string name="shizuku_state_ready">Listo: Shizuku está activo y GameCast tiene permiso</string>
+    <string name="shizuku_what_title">Qué es Shizuku</string>
+    <string name="shizuku_what_body">Una app gratuita y de código abierto que da a otras apps permisos de «shell» (los mismos que tiene un ordenador conectado por ADB). No es root y no modifica el sistema. Tú decides qué apps pueden usarla.</string>
+    <string name="shizuku_use_title">Para qué la usa GameCast</string>
+    <string name="shizuku_use_body">Para crear una pantalla virtual donde corre el juego, lanzarlo en ella e inyectarle los toques del mando. Así el juego se ve en la TV sin que el mando de GameCast aparezca en ella. Sin Shizuku esas funciones no existen: el modo «Juego en TV» (espejo simple) sigue funcionando sin él.</string>
+    <string name="shizuku_steps_title">Cómo activarlo</string>
+    <string name="shizuku_steps_body">1. Instala Shizuku con el botón de arriba.\n2. En Ajustes del teléfono activa las opciones de desarrollador y la «Depuración inalámbrica» (Android 11 o superior; necesitas estar conectado a una red Wi-Fi).\n3. En Shizuku elige iniciar mediante depuración inalámbrica y sigue su asistente de emparejamiento. También puedes arrancarlo desde un ordenador con ADB; la guía oficial explica el comando.\n4. Cuando Shizuku diga que está en ejecución, vuelve aquí y pulsa «Conceder permiso».\n\nSi reinicias el teléfono, Shizuku se detiene y hay que arrancarlo otra vez.</string>
+    <string name="shizuku_diag_title">Diagnóstico</string>
+    <string name="shizuku_btn_install">Instalar Shizuku</string>
+    <string name="shizuku_btn_open">Abrir Shizuku</string>
+    <string name="shizuku_btn_permission">Conceder permiso</string>
+    <string name="shizuku_btn_test">Probar conexión</string>
+    <string name="shizuku_btn_guide">Guía oficial de Shizuku</string>
+    <string name="shizuku_btn_continue">Continuar</string>
+    <string name="shizuku_btn_copy">Copiar diagnóstico</string>
+    <string name="shizuku_not_installed_toast">Shizuku no está instalado.</string>
+    <string name="shizuku_permission_manual">No se pudo preguntar. Abre Shizuku y autoriza GameCast en su lista de apps.</string>
+    <string name="shizuku_diag_copied">Diagnóstico copiado.</string>
+    <string name="shizuku_no_browser">No hay navegador para abrir el enlace.</string>
+</resources>

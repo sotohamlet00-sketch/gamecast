@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ===== Tipografía: una sola familia, dos pesos (regular y medium) ===== -->
+    <style name="TextAppearance.GC" parent="android:TextAppearance">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/gc_text</item>
+    </style>
+    <style name="TextAppearance.GC.Display" parent="TextAppearance.GC">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:letterSpacing">-0.01</item>
+    </style>
+    <style name="TextAppearance.GC.Title" parent="TextAppearance.GC">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="TextAppearance.GC.Body" parent="TextAppearance.GC">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="TextAppearance.GC.Caption" parent="TextAppearance.GC">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/gc_text_muted</item>
+    </style>
+    <style name="TextAppearance.GC.Button" parent="TextAppearance.GC">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:textColor">@color/btn_text</item>
+    </style>
+    <style name="TextAppearance.GC.ButtonSecondary" parent="TextAppearance.GC.Button">
+        <item name="android:textColor">@color/btn_text_secondary</item>
+    </style>
+
+    <!-- Mando (colores fijos) -->
+    <style name="TextAppearance.Pad" parent="android:TextAppearance">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/pad_btn_text</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="TextAppearance.Pad.Small" parent="TextAppearance.Pad">
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+    <style name="TextAppearance.Pad.Status" parent="TextAppearance.Pad">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="TextAppearance.Pad.Caption" parent="TextAppearance.Pad.Status">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/pad_text_muted</item>
+    </style>
+
+    <!-- ===== Botones de Inicio y Ajustes (TextView con degradado y sombra) ===== -->
+    <style name="GCButton">
+        <item name="android:gravity">center</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:textAppearance">@style/TextAppearance.GC.Button</item>
+    </style>
+    <style name="GCButtonPrimary" parent="GCButton">
+        <item name="android:background">@drawable/bg_btn_primary</item>
+    </style>
+    <style name="GCButtonSecondary" parent="GCButton">
+        <item name="android:background">@drawable/bg_btn_secondary</item>
+        <item name="android:textAppearance">@style/TextAppearance.GC.ButtonSecondary</item>
+        <item name="android:elevation">1dp</item>
+    </style>
+
+    <!-- ===== Teclas del mando ===== -->
+    <style name="PadRect">
+        <item name="android:background">@drawable/bg_pad_rect</item>
+        <item name="android:gravity">center</item>
+        <item name="android:elevation">6dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textAppearance">@style/TextAppearance.Pad</item>
+    </style>
+    <style name="PadRound">
+        <item name="android:background">@drawable/bg_pad_round</item>
+        <item name="android:gravity">center</item>
+        <item name="android:elevation">6dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textAppearance">@style/TextAppearance.Pad</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+    <style name="PadSmall">
+        <item name="android:background">@drawable/bg_pad_rect</item>
+        <item name="android:gravity">center</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textAppearance">@style/TextAppearance.Pad.Small</item>
+    </style>
+</resources>

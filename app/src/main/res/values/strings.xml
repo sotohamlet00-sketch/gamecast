@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GameCast</string>
+    <string name="default_bt_name">Mando Android</string>
+
+    <!-- Inicio -->
+    <string name="home_subtitle">Tu teléfono como mando y como pantalla de juego.</string>
+    <string name="card_hid_title">Mando HID</string>
+    <string name="card_hid_desc">Usa el teléfono como mando Bluetooth de tu TV o dispositivo.</string>
+    <string name="card_tv_title">Juego en TV</string>
+    <string name="card_tv_desc">Envía la pantalla del teléfono a la TV (Miracast).</string>
+    <string name="btn_start_mode">Iniciar</string>
+    <string name="btn_stop_mode">Detener</string>
+    <string name="btn_controllers">Abrir controles</string>
+    <string name="btn_settings">Ajustes</string>
+    <string name="home_note">Los controles táctiles solo envían datos por Bluetooth cuando el modo Mando HID está activo. No pueden manejar el juego de otra app del teléfono.</string>
+    <string name="hid_off">Apagado</string>
+    <string name="tv_target">TV: %1$s</string>
+    <string name="tv_none">sin elegir</string>
+
+    <!-- Estado del mando HID -->
+    <string name="hid_idle">Iniciando mando Bluetooth…</string>
+    <string name="hid_no_bluetooth">Este dispositivo no tiene Bluetooth.</string>
+    <string name="hid_bluetooth_off">Bluetooth apagado. Actívalo y el mando se registrará solo.</string>
+    <string name="hid_no_permission">Falta el permiso de Bluetooth (Dispositivos cercanos). Detén el modo, concede el permiso e inicia de nuevo.</string>
+    <string name="hid_no_hid">Este teléfono no permite actuar como mando Bluetooth HID (el perfil HID Device no está disponible en este equipo o ROM).</string>
+    <string name="hid_registration_failed">No se pudo registrar el mando. Puede que otra app esté usando el perfil HID. Ciérrala y vuelve a iniciar el modo.</string>
+    <string name="hid_ready">Listo. Vincula el teléfono desde el menú Bluetooth de la TV, o pulsa Emparejar.</string>
+    <string name="hid_connecting">Conectando con %1$s…</string>
+    <string name="hid_connected">Conectado a %1$s</string>
+
+    <!-- Mando táctil -->
+    <string name="ctl_hid_off">Modo Mando HID apagado: los controles no envían nada. Actívalo en Inicio.</string>
+    <string name="ctl_tv_off">Juego en TV: apagado</string>
+    <string name="btn_pair">Emparejar</string>
+    <string name="btn_disconnect">Desconectar</string>
+    <string name="btn_home">Inicio</string>
+
+    <!-- Emparejamiento -->
+    <string name="pair_title">Emparejar con una TV</string>
+    <string name="pair_visible">Hacer visible el teléfono (5 min)</string>
+    <string name="pair_pick">Elegir una TV ya emparejada</string>
+    <string name="pair_settings">Ajustes de Bluetooth</string>
+    <string name="dialog_pick_title">TV o dispositivo emparejado</string>
+    <string name="dialog_no_paired">No hay dispositivos emparejados. Vincula la TV desde los ajustes de Bluetooth, o hazlo desde la TV tras pulsar «Hacer visible».</string>
+
+    <!-- Ajustes -->
+    <string name="settings_title">Ajustes</string>
+    <string name="settings_bt_title">Mando Bluetooth</string>
+    <string name="settings_bt_hint">Nombre del dispositivo Bluetooth</string>
+    <string name="settings_bt_note">Es el nombre que verá la TV al buscar. Cambia el nombre Bluetooth del teléfono. Si el modo Mando HID está activo, detenlo e inícialo de nuevo para aplicarlo.</string>
+    <string name="btn_save">Guardar nombre</string>
+    <string name="btn_pair_settings">Emparejar con una TV</string>
+    <string name="settings_tv_title">Pantalla de proyección</string>
+    <string name="btn_pick_tv">Seleccionar TV</string>
+    <string name="err_name_empty">Escribe un nombre.</string>
+    <string name="toast_name_saved">Nombre guardado.</string>
+    <string name="toast_name_saved_partial">Nombre guardado, pero el sistema no permitió cambiar el nombre Bluetooth del teléfono.</string>
+    <string name="toast_name_no_permission">Sin el permiso de Bluetooth no se puede cambiar el nombre del adaptador. El nombre se usará para el mando.</string>
+
+    <!-- Capacidades Miracast -->
+    <string name="cap_supported">Miracast disponible en este teléfono. Conecta la TV desde el panel Cast del sistema.</string>
+    <string name="cap_limited">Este teléfono tiene Wi-Fi Direct, pero no se encontró el panel de Cast estándar. Usa «Proyección inalámbrica» (Huawei), «Transmitir», «Smart View» o «Duplicar pantalla» del panel rápido.</string>
+    <string name="cap_unsupported">Este teléfono no ofrece Miracast (el fabricante lo desactivó o no tiene Wi-Fi Direct). Alternativas: proyectar por cable USB-C/HDMI si tu teléfono lo permite, o usar el modo Mando HID.</string>
+
+    <!-- Selector de TV -->
+    <string name="tv_picker_title">Elegir TV</string>
+    <string name="tv_picker_hint">Si tu TV no aparece, conéctala desde el panel Cast del sistema («Proyección inalámbrica» en Huawei) y vuelve aquí. Si tu teléfono ya duplica la pantalla por sí solo al conectarse, no necesitas este modo.</string>
+    <string name="btn_cast_settings">Abrir Cast del sistema</string>
+
+    <!-- Proyección -->
+    <string name="status_idle">Proyección detenida.</string>
+    <string name="status_starting">Iniciando proyección…</string>
+    <string name="status_streaming">Proyectando a %1$s</string>
+    <string name="status_streaming_generic">Proyectando a la TV.</string>
+    <string name="status_consent_denied">No se concedió el permiso para capturar la pantalla.</string>
+    <string name="status_stopped_system">El sistema detuvo la captura (por ejemplo, al bloquear la pantalla).</string>
+    <string name="status_tv_lost">La TV se desconectó; proyección detenida.</string>
+    <string name="err_no_consent">No se recibió el permiso de captura de pantalla.</string>
+    <string name="err_display_gone">La pantalla elegida ya no está disponible. Conéctala de nuevo.</string>
+    <string name="err_no_overlay">Falta el permiso «Mostrar sobre otras apps».</string>
+    <string name="err_tv_not_connected">La TV elegida no está conectada. Elígela de nuevo.</string>
+    <string name="err_security">El sistema rechazó la captura (permiso o servicio en primer plano).</string>
+    <string name="err_generic">No se pudo iniciar la proyección en esta pantalla.</string>
+    <string name="err_hid_service">No se pudo iniciar el modo Mando HID. Revisa el permiso de Bluetooth.</string>
+
+    <!-- Diálogos y avisos -->
+    <string name="dialog_bt_denied">Sin el permiso «Dispositivos cercanos» el teléfono no puede actuar como mando Bluetooth. Puedes concederlo en los ajustes de la app.</string>
+    <string name="dialog_open_app_settings">Abrir ajustes</string>
+    <string name="dialog_overlay_msg">Para mostrar la imagen en la TV mientras usas otras apps, activa «Mostrar sobre otras apps» para esta aplicación y vuelve a pulsar Iniciar.</string>
+    <string name="dialog_overlay_ok">Dar permiso</string>
+    <string name="toast_bt_required">Hace falta encender Bluetooth para usar el mando.</string>
+    <string name="toast_start_hid_first">Primero inicia el modo Mando HID.</string>
+    <string name="toast_need_nearby">Falta el permiso de Dispositivos cercanos. Actívalo en los ajustes de la app.</string>
+    <string name="toast_connect_failed">No se pudo iniciar la conexión.</string>
+    <string name="toast_connect_tried">Conectando… si la TV no aparece conectada, hazlo desde el panel Cast.</string>
+    <string name="toast_discoverable_failed">No se pudo hacer visible el teléfono.</string>
+    <string name="toast_enable_bt_manually">Activa Bluetooth desde los ajustes del sistema.</string>
+    <string name="toast_open_cast_failed">No se pudo abrir el panel Cast. Usa «Proyección inalámbrica» (Huawei), «Transmitir» o «Smart View» en el panel rápido.</string>
+
+    <!-- Notificaciones -->
+    <string name="notif_channel">Proyección de pantalla</string>
+    <string name="notif_title">Juego en TV</string>
+    <string name="notif_text">Enviando la pantalla a la TV</string>
+    <string name="notif_hid_channel">Mando HID</string>
+    <string name="notif_hid_title">Mando HID activo</string>
+    <string name="notif_hid_text">El teléfono funciona como mando Bluetooth</string>
+    <string name="notif_stop">Detener</string>
+</resources>

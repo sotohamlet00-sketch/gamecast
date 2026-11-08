@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Tema claro (Inicio y Ajustes). Acentos: gc_primary (índigo->violeta), gc_secondary (menta), gc_danger (coral) -->
+    <color name="gc_bg">#FFF3F5FB</color>
+    <color name="gc_surface">#FFFFFFFF</color>
+    <color name="gc_surface_variant">#FFE7EBF5</color>
+    <color name="gc_outline">#FFD8DEEC</color>
+    <color name="gc_text">#FF121826</color>
+    <color name="gc_text_muted">#FF5A6479</color>
+    <color name="gc_primary">#FF5B6CFF</color>
+    <color name="gc_primary_end">#FF8A5CFF</color>
+    <color name="gc_secondary">#FF0FA899</color>
+    <color name="gc_danger">#FFF0436A</color>
+    <color name="gc_danger_end">#FFFF7A59</color>
+
+    <!-- Mando: siempre oscuro, misma familia de acentos -->
+    <color name="pad_bg_top">#FF141824</color>
+    <color name="pad_bg_bottom">#FF0A0C12</color>
+    <color name="pad_key_top">#FF30384B</color>
+    <color name="pad_key_bottom">#FF1B2131</color>
+    <color name="pad_key_stroke">#33FFFFFF</color>
+    <color name="pad_text">#FFEEF1F8</color>
+    <color name="pad_text_muted">#FF98A2B8</color>
+    <color name="pad_accent_light">#FF9AA7FF</color>
+    <color name="pad_accent">#FF6C7CFF</color>
+    <color name="pad_accent_dark">#FF4A52DE</color>
+    <color name="pad_accent2">#FF2DD4BF</color>
+    <color name="pad_danger">#FFFF5C7A</color>
+    <color name="joystick_base_inner">#FF1C2230</color>
+    <color name="joystick_base_outer">#FF0F131C</color>
+</resources>

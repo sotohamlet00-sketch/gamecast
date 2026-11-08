@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Inicio y Ajustes: siguen el modo claro/oscuro del sistema -->
+    <style name="Theme.GameCast" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/gc_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/gc_secondary</item>
+        <item name="colorSurface">@color/gc_surface</item>
+        <item name="colorOnSurface">@color/gc_text</item>
+        <item name="colorError">@color/gc_danger</item>
+        <item name="android:colorBackground">@color/gc_bg</item>
+        <item name="android:windowBackground">@color/gc_bg</item>
+        <item name="android:textColorPrimary">@color/gc_text</item>
+        <item name="android:textColorSecondary">@color/gc_text_muted</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">@bool/gc_light_bars</item>
+        <item name="android:windowLightNavigationBar">@bool/gc_light_bars</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+
+    <!-- Mando táctil: siempre oscuro (los recursos -night no dependen del tema, por eso usa colores pad_*) -->
+    <style name="Theme.GamepadHid" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">@color/pad_accent</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/pad_accent2</item>
+        <item name="android:windowBackground">@drawable/bg_controller</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+</resources>

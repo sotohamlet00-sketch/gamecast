@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Guarda la animación de latido de los puntos de estado -->
+    <item name="tag_pulse" type="id" />
+</resources>

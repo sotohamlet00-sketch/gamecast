@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Mando flotante sobre la pantalla principal. Se infla dentro de FloatingPadService. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/bg_pad_panel"
+    android:baselineAligned="false" android:orientation="horizontal" android:padding="6dp">
+
+    <!-- Izquierda: L2/L1 y stick -->
+    <LinearLayout
+        android:layout_width="0dp" android:layout_height="match_parent"
+        android:layout_weight="1" android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="44dp" android:orientation="horizontal">
+            <TextView android:id="@+id/padL2" style="@style/PadRect" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:text="L2" />
+            <TextView android:id="@+id/padL1" style="@style/PadRect" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:text="L1" />
+        </LinearLayout>
+        <FrameLayout android:layout_width="match_parent" android:layout_height="0dp"
+            android:layout_weight="1" android:padding="4dp">
+            <com.example.gamepadhid.ui.JoystickView
+                android:id="@+id/padLeftStick"
+                android:layout_width="match_parent" android:layout_height="match_parent" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Centro: asa para arrastrar, cerrar, Select y Start -->
+    <LinearLayout
+        android:layout_width="0dp" android:layout_height="match_parent"
+        android:layout_marginHorizontal="6dp" android:layout_weight="0.5"
+        android:gravity="center" android:orientation="vertical">
+        <TextView android:id="@+id/padHandle" style="@style/PadSmall"
+            android:layout_width="match_parent" android:layout_height="40dp"
+            android:layout_margin="3dp" android:text="✥" />
+        <TextView android:id="@+id/padClose" style="@style/PadSmall"
+            android:layout_width="match_parent" android:layout_height="40dp"
+            android:layout_margin="3dp" android:text="✕" />
+        <TextView android:id="@+id/padSelect" style="@style/PadSmall"
+            android:layout_width="match_parent" android:layout_height="40dp"
+            android:layout_margin="3dp" android:text="SEL" />
+        <TextView android:id="@+id/padStart" style="@style/PadSmall"
+            android:layout_width="match_parent" android:layout_height="40dp"
+            android:layout_margin="3dp" android:text="START" />
+    </LinearLayout>
+
+    <!-- Derecha: R1/R2, ABXY y stick -->
+    <LinearLayout
+        android:layout_width="0dp" android:layout_height="match_parent"
+        android:layout_weight="1" android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="44dp" android:orientation="horizontal">
+            <TextView android:id="@+id/padR1" style="@style/PadRect" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:text="R1" />
+            <TextView android:id="@+id/padR2" style="@style/PadRect" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="3dp" android:text="R2" />
+        </LinearLayout>
+        <FrameLayout android:layout_width="match_parent" android:layout_height="0dp"
+            android:layout_weight="1" android:clipChildren="false">
+            <GridLayout
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="center" android:rowCount="3" android:columnCount="3">
+            <TextView android:id="@+id/padY" style="@style/PadRound" android:layout_width="38dp" android:layout_height="38dp" android:layout_margin="2dp" android:layout_row="0" android:layout_column="1" android:text="Y" />
+            <TextView android:id="@+id/padX" style="@style/PadRound" android:layout_width="38dp" android:layout_height="38dp" android:layout_margin="2dp" android:layout_row="1" android:layout_column="0" android:text="X" />
+            <TextView android:id="@+id/padB" style="@style/PadRound" android:layout_width="38dp" android:layout_height="38dp" android:layout_margin="2dp" android:layout_row="1" android:layout_column="2" android:text="B" />
+            <TextView android:id="@+id/padA" style="@style/PadRound" android:layout_width="38dp" android:layout_height="38dp" android:layout_margin="2dp" android:layout_row="2" android:layout_column="1" android:text="A" />
+            </GridLayout>
+        </FrameLayout>
+        <FrameLayout android:layout_width="match_parent" android:layout_height="0dp"
+            android:layout_weight="1" android:padding="4dp">
+            <com.example.gamepadhid.ui.JoystickView
+                android:id="@+id/padRightStick"
+                android:layout_width="match_parent" android:layout_height="match_parent" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

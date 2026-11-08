@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <!-- La pantalla virtual se ve aquí en directo (proporción de la pantalla virtual) -->
+    <com.example.gamepadhid.ui.AspectFrameLayout
+        android:id="@+id/stage"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:layout_gravity="center">
+        <SurfaceView
+            android:id="@+id/previewSurface"
+            android:layout_width="match_parent" android:layout_height="match_parent" />
+        <com.example.gamepadhid.overlay.MapperView
+            android:id="@+id/mapper"
+            android:layout_width="match_parent" android:layout_height="match_parent" />
+    </com.example.gamepadhid.ui.AspectFrameLayout>
+
+    <LinearLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="#CC0A0C12"
+        android:orientation="vertical"
+        android:paddingEnd="52dp">
+        <HorizontalScrollView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:gravity="center_vertical" android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tvMapperGame"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:textAppearance="@style/TextAppearance.Pad" />
+                <TextView android:id="@+id/btnMapperMode" style="@style/PadSmall" android:layout_width="wrap_content" android:layout_height="40dp" android:layout_margin="4dp" android:paddingHorizontal="14dp" android:text="@string/mapper_mode_place" />
+                <TextView android:id="@+id/btnMapperAdd" style="@style/PadSmall" android:layout_width="wrap_content" android:layout_height="40dp" android:layout_margin="4dp" android:paddingHorizontal="14dp" android:text="@string/mapper_btn_add" />
+                <TextView android:id="@+id/btnMapperDelete" style="@style/PadSmall" android:layout_width="wrap_content" android:layout_height="40dp" android:layout_margin="4dp" android:paddingHorizontal="14dp" android:text="@string/mapper_btn_delete" />
+                <TextView android:id="@+id/btnMapperSmaller" style="@style/PadSmall"
+                    android:layout_width="40dp" android:layout_height="40dp"
+                    android:layout_margin="4dp" android:text="−" />
+                <TextView android:id="@+id/btnMapperBigger" style="@style/PadSmall"
+                    android:layout_width="40dp" android:layout_height="40dp"
+                    android:layout_margin="4dp" android:text="+" />
+                <TextView android:id="@+id/btnMapperTemplate" style="@style/PadSmall" android:layout_width="wrap_content" android:layout_height="40dp" android:layout_margin="4dp" android:paddingHorizontal="14dp" android:text="@string/mapper_btn_template" />
+                <TextView android:id="@+id/btnMapperGame" style="@style/PadSmall" android:layout_width="wrap_content" android:layout_height="40dp" android:layout_margin="4dp" android:paddingHorizontal="14dp" android:text="@string/mapper_btn_game" />
+                <TextView android:id="@+id/btnMapperSave" style="@style/PadSmall" android:layout_width="wrap_content" android:layout_height="40dp" android:layout_margin="4dp" android:paddingHorizontal="14dp" android:text="@string/mapper_btn_save" />
+                <TextView android:id="@+id/btnMapperExit" style="@style/PadSmall" android:layout_width="wrap_content" android:layout_height="40dp" android:layout_margin="4dp" android:paddingHorizontal="14dp" android:text="@string/mapper_btn_exit" />
+            </LinearLayout>
+        </HorizontalScrollView>
+        <TextView
+            android:id="@+id/tvMapperStatus"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textAppearance="@style/TextAppearance.Pad.Status" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btnMapperBarToggle"
+        android:layout_width="40dp" android:layout_height="40dp"
+        android:layout_gravity="top|end" android:layout_margin="8dp"
+        android:background="@drawable/bg_pad_round"
+        android:contentDescription="@string/btn_settings"
+        android:elevation="8dp" android:gravity="center"
+        android:text="☰" android:textColor="@color/pad_text" android:textSize="18sp" />
+</FrameLayout>

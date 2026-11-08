@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tema oscuro (Inicio y Ajustes) -->
+    <color name="gc_bg">#FF0D1017</color>
+    <color name="gc_surface">#FF171C27</color>
+    <color name="gc_surface_variant">#FF222A39</color>
+    <color name="gc_outline">#FF2E384B</color>
+    <color name="gc_text">#FFEEF1F8</color>
+    <color name="gc_text_muted">#FF98A2B8</color>
+    <color name="gc_primary">#FF6C7CFF</color>
+    <color name="gc_primary_end">#FF9A6BFF</color>
+    <color name="gc_secondary">#FF2DD4BF</color>
+    <color name="gc_danger">#FFFF5C7A</color>
+    <color name="gc_danger_end">#FFFF8A66</color>
+</resources>
