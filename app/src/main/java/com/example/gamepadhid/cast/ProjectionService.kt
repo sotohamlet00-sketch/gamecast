@@ -157,7 +157,7 @@ class ProjectionService : Service(), TvOutputWindow.Listener {
 
         try {
             val manager = getSystemService(Context.MEDIA_PROJECTION_SERVICE) as MediaProjectionManager
-            val proj = manager.getMediaProjection(resultCode, data)
+            val proj = manager.getMediaProjection(resultCode, data) ?: return fail(R.string.err_generic)
             // Android 14+: obligatorio registrar el callback antes de crear el VirtualDisplay
             proj.registerCallback(projectionCallback, handler)
             projection = proj
